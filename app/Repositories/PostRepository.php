@@ -21,4 +21,14 @@ class PostRepository
         $this->post = $post;
     }
 
+    /**
+     * Get all posts.
+     *
+     * @return Post $post
+     */
+    public function getAll()
+    {
+        return $this->post->get();
+    }
+
 }
