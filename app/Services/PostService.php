@@ -97,8 +97,38 @@ class PostService
             $post = $this->postRepository->update($data, $id);
 
         } catch (Exception $e) {
-            throw new InvalidArgumentException($e->getMessage());
+            DB::rollBack();
+            Log::info($e->getMessage());
+
+            throw new InvalidArgumentException('Unable to update post data');
         }
+
+        DB::commit();
+
+        return $post;
+    }
+
+    /**
+     * Validate post data.
+     * Store to DB if there are no errors.
+     *
+     * @param array $data
+     * @return String
+     */
+    public function savePostData($data)
+    {
+        $validator = Validator::make($data, [
+            'title' => 'required',
+            'description' => 'required'
+        ]);
+
+        if ($validator->fails()) {
+            throw new InvalidArgumentException($validator->errors()->first());
+        }
+
+        $result = $this->postRepository->save($data);
+
+        return $result;
     }
 
 }
