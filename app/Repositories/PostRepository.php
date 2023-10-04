@@ -31,4 +31,17 @@ class PostRepository
         return $this->post->get();
     }
 
+    /**
+     * Get post by id
+     *
+     * @param $id
+     * @return mixed
+     */
+    public function getById($id)
+    {
+        return $this->post
+            ->where('id', $id)
+            ->get();
+    }
+
 }
