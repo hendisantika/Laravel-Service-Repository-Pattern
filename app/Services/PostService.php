@@ -61,5 +61,15 @@ class PostService
         return $this->postRepository->getAll();
     }
 
+    /**
+     * Get post by id.
+     *
+     * @param $id
+     * @return String
+     */
+    public function getById($id)
+    {
+        return $this->postRepository->getById($id);
+    }
 
 }
