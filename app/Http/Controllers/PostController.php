@@ -85,10 +85,23 @@ class PostController extends Controller
 
     /**
      * Display the specified resource.
+     *
+     * @param id
+     * @return Response
      */
-    public function show(Post $post)
+    public function show($id)
     {
-        //
+        $result = ['status' => 200];
+
+        try {
+            $result['data'] = $this->postService->getById($id);
+        } catch (Exception $e) {
+            $result = [
+                'status' => 500,
+                'error' => $e->getMessage()
+            ];
+        }
+        return response()->json($result, $result['status']);
     }
 
     /**
