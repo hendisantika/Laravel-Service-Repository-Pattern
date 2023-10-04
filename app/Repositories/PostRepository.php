@@ -81,4 +81,18 @@ class PostRepository
         return $post;
     }
 
+    /**
+     * Update Post
+     *
+     * @param $data
+     * @return Post
+     */
+    public function delete($id)
+    {
+
+        $post = $this->post->find($id);
+        $post->delete();
+
+        return $post;
+    }
 }
