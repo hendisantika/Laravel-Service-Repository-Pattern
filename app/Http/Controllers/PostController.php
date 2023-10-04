@@ -112,12 +112,33 @@ class PostController extends Controller
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Post $post)
+* Update post.
+*
+* @param Request $request
+* @param id
+* @return \Illuminate\Http\Response
+*/
+    public function update(Request $request, $id)
     {
-        //
+        $data = $request->only([
+            'title',
+            'description'
+        ]);
+
+        $result = ['status' => 200];
+
+        try {
+            $result['data'] = $this->postService->updatePost($data, $id);
+
+        } catch (Exception $e) {
+            $result = [
+                'status' => 500,
+                'error' => $e->getMessage()
+            ];
+        }
+
+        return response()->json($result, $result['status']);
+
     }
 
     /**
