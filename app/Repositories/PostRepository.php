@@ -44,4 +44,22 @@ class PostRepository
             ->get();
     }
 
+    /**
+     * Save Post
+     *
+     * @param $data
+     * @return Post
+     */
+    public function save($data)
+    {
+        $post = new $this->post;
+
+        $post->title = $data['title'];
+        $post->description = $data['description'];
+
+        $post->save();
+
+        return $post->fresh();
+    }
+
 }
