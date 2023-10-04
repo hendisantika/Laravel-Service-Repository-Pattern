@@ -112,11 +112,12 @@ class PostController extends Controller
         //
     }
 
+    /**
 * Update post.
 *
 * @param Request $request
 * @param id
-* @return \Illuminate\Http\Response
+* @return Response
 */
     public function update(Request $request, $id)
     {
@@ -143,9 +144,22 @@ class PostController extends Controller
 
     /**
      * Remove the specified resource from storage.
+     *
+     * @param $id
+     * @return Response
      */
-    public function destroy(Post $post)
+    public function destroy($id)
     {
-        //
+        $result = ['status' => 200];
+
+        try {
+            $result['data'] = $this->postService->deleteById($id);
+        } catch (Exception $e) {
+            $result = [
+                'status' => 500,
+                'error' => $e->getMessage()
+            ];
+        }
+        return response()->json($result, $result['status']);
     }
 }
