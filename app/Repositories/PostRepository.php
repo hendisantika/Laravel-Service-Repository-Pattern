@@ -62,4 +62,23 @@ class PostRepository
         return $post->fresh();
     }
 
+    /**
+     * Update Post
+     *
+     * @param $data
+     * @return Post
+     */
+    public function update($data, $id)
+    {
+
+        $post = $this->post->find($id);
+
+        $post->title = $data['title'];
+        $post->description = $data['description'];
+
+        $post->update();
+
+        return $post;
+    }
+
 }
