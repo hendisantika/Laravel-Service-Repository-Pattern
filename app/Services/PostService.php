@@ -51,4 +51,15 @@ class PostService
 
     }
 
+    /**
+     * Get all post.
+     *
+     * @return String
+     */
+    public function getAll()
+    {
+        return $this->postRepository->getAll();
+    }
+
+
 }
