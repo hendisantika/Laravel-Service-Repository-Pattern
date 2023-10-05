@@ -1,0 +1,180 @@
+{
+    "_type": "export",
+    "__export_format": 4,
+    "__export_date": "2023-10-05T00:28:47.370Z",
+    "__export_source": "insomnia.desktop.app:v8.2.0",
+    "resources": [
+        {
+            "_id": "req_5144ac149cd144d9bcbe73ab21968eee",
+            "parentId": "wrk_c3b210da752c4b36ba7e2f7a4648e1ea",
+            "modified": 1696465511758,
+            "created": 1696465488649,
+            "url": "http://localhost:8000/api/post/6",
+            "name": "Delete Post By ID",
+            "description": "",
+            "method": "DELETE",
+            "body": {},
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "User-Agent",
+                    "value": "insomnia/8.2.0"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1696465488649,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "wrk_c3b210da752c4b36ba7e2f7a4648e1ea",
+            "parentId": null,
+            "modified": 1696464995896,
+            "created": 1696464995896,
+            "name": "Laravel Service Repository Pattern",
+            "description": "",
+            "scope": "collection",
+            "_type": "workspace"
+        },
+        {
+            "_id": "req_a9174d50e0a9413f87bcd911fc8bcb41",
+            "parentId": "wrk_c3b210da752c4b36ba7e2f7a4648e1ea",
+            "modified": 1696465436118,
+            "created": 1696465193382,
+            "url": "http://localhost:8000/api/post/2?title=title6Updated&description=description10Updated",
+            "name": "Update Post By ID",
+            "description": "",
+            "method": "PATCH",
+            "body": {},
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "User-Agent",
+                    "value": "insomnia/8.2.0"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1696465193382,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_7dcdd9d0e49a4df9a669f70a59dd6bec",
+            "parentId": "wrk_c3b210da752c4b36ba7e2f7a4648e1ea",
+            "modified": 1696465182879,
+            "created": 1696465161265,
+            "url": "http://localhost:8000/api/post/1",
+            "name": "Get Post By ID",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "User-Agent",
+                    "value": "insomnia/8.2.0"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1696465161265,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_53b2e96ccbba46f19bf4c4c7b2e463ba",
+            "parentId": "wrk_c3b210da752c4b36ba7e2f7a4648e1ea",
+            "modified": 1696465121311,
+            "created": 1696465069099,
+            "url": "http://localhost:8000/api/post?title=title6&description=description6",
+            "name": "Add New Post",
+            "description": "",
+            "method": "POST",
+            "body": {},
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "User-Agent",
+                    "value": "insomnia/8.2.0"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1696465069099,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_b66785ac54de4ee0a49e2ee59b442335",
+            "parentId": "wrk_c3b210da752c4b36ba7e2f7a4648e1ea",
+            "modified": 1696465066128,
+            "created": 1696465000740,
+            "url": "http://localhost:8000/api/post",
+            "name": "List All Posts",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "User-Agent",
+                    "value": "insomnia/8.2.0"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1696465000740,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "env_58cc125f8aa0b5ee7579aff6dcc7e95b5e02a4d8",
+            "parentId": "wrk_c3b210da752c4b36ba7e2f7a4648e1ea",
+            "modified": 1696464995898,
+            "created": 1696464995898,
+            "name": "Base Environment",
+            "data": {},
+            "dataPropertyOrder": null,
+            "color": null,
+            "isPrivate": false,
+            "metaSortKey": 1696464995898,
+            "_type": "environment"
+        },
+        {
+            "_id": "jar_58cc125f8aa0b5ee7579aff6dcc7e95b5e02a4d8",
+            "parentId": "wrk_c3b210da752c4b36ba7e2f7a4648e1ea",
+            "modified": 1696464995900,
+            "created": 1696464995900,
+            "name": "Default Jar",
+            "cookies": [],
+            "_type": "cookie_jar"
+        }
+    ]
+}
